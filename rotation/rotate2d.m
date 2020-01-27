@@ -56,7 +56,6 @@ shape = fill(corners(1, :), corners(2, :), 'r');
 polycenter = polycenter ./ sum(polyarea);
 plot(polycenter(1), polycenter(2), "*");
 
-
 %% Rotate around center
 angle = pi/3;
 frame = 100;
