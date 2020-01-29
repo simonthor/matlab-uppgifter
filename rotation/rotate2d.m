@@ -52,7 +52,7 @@ for i = 1:(numpoints-2)
     %plot(centroid(1), centroid(2), ".")
     
 end
-
+cla
 shape = fill(corners(1, :), corners(2, :), 'r');
 
 %% Get center of polygon
