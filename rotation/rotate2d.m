@@ -1,5 +1,4 @@
 %% Get input from user
-
 clf
 
 points= zeros(2, 1);
@@ -70,10 +69,9 @@ for i=1:frame
     x = get(shape, "XData");
     y = get(shape, "YData");
     rotated = rotation * ([x'; y'] - polycenter) + polycenter;
-    set(shape, "XData", rotated(1, :))
-    set(shape, "YData", rotated(2, :))
+    set(shape, "XData", rotated(1, :));
+    set(shape, "YData", rotated(2, :));
 
-    %fill(rotated(1, :), rotated(2, :), "b");
     drawnow
 end
 hold off
