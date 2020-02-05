@@ -1,5 +1,7 @@
 %% Create and plot tetrahedron with center in origin
 clf
+axis equal 
+axis off
 
 tetra = [sqrt(8/9) -sqrt(2/9) -sqrt(2/9) 0;
         0 sqrt(2/3) -sqrt(2/3) 0;
@@ -7,9 +9,12 @@ tetra = [sqrt(8/9) -sqrt(2/9) -sqrt(2/9) 0;
 
 plotTetra(tetra, "k");
 
+savefig("poster figures\\figures\\3DTetraBefore.fig")
+
 %% Rotate tetrahedron
-angle = pi/4;
-rotaxis = 1/sqrt(2).*[1 0 1]';
+cla
+angle = pi/6;
+rotaxis = [0 0 1]';
 x = rotaxis(1);
 y = rotaxis(2);
 z = rotaxis(3);
@@ -19,4 +24,4 @@ tetra = rotm * tetra;
 
 plotTetra(tetra, "b");
 
-axis equal
+savefig("poster figures\\figures\\3DTetraAfter.fig")
