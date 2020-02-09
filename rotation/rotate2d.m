@@ -21,13 +21,15 @@ while 1
     i = i+1;
 end
 
-%% Sort points based on x
-[~, index] = sort(points(1,:));
-sortedPoints = points(:, index);
 
 %% Order in polygon shape
 corners = points(:, convhull(points(1, :), points(2, :)));
 
+%% Sort points based on x
+[~, index] = sort(corners(1,:));
+sortedPoints = corners(:, index);
+% Remove identical point created by convhull
+sortedPoints = sortedPoints(:, 2:end);
 %% Get triangles and calculate centroids
 polycenter = zeros(2, 1);
 polyarea = zeros(1);
@@ -38,9 +40,10 @@ for i = 1:(numpoints-2)
     A = [(triangle(:, 3) + triangle(:, 2))/2 - triangle(:, 1) (triangle(:, 3) + triangle(:, 1))/2 - triangle(:, 2)];
     b = triangle(:, 2) - triangle(:, 1);
     x = A\b;
+    disp(x);
     centroid = A(:, 1) .* x(1) + triangle(:, 1);
     
-    lines = points(:, 2:end) - points(:, 1:end-1);
+    lines = sortedPoints(:, 2:end) - sortedPoints(:, 1:end-1);
     area = norm(cross([lines(:, 1); 0], [lines(:, 2); 0]))./2;
     
     polycenter = polycenter + centroid * area;
