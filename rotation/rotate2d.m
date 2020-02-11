@@ -29,7 +29,7 @@ corners = points(:, convhull(points(1, :), points(2, :)));
 [~, index] = sort(corners(1,:));
 sortedPoints = corners(:, index);
 % Remove identical point created by convhull
-sortedPoints = sortedPoints(:, 2:end);
+sortedPoints = unique(sortedPoints', "rows")';
 %% Get triangles and calculate centroids
 polycenter = zeros(2, 1);
 polyarea = zeros(1);
