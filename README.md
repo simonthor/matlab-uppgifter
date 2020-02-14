@@ -1,9 +1,12 @@
 # matlab-uppgifter
-Uppgifter i SF1672
+Uppgifter i MATLAB f√∂r studier vid KTH.
 
-## Uppgifter
-Denna mapp innehÂller alla uppgifter jag gjort fˆr att tr‰na pÂ MATLAB.
+## Mappar
+### Uppgifter
+Alla uppgifter jag gjort f√∂r att tr√§na p√• MATLAB i SF1672.
 
-## Rotation
-I denna mapp finns all kod fˆr projektuppgiften fˆr SF1672, MATLAB-delen. Uppgiften ‰r uppgift 8, rotation, d‰r man ska rotera objekt i 2D och 3D.
+### Rotation
+All kod f√∂r projektuppgiften f√∂r SF1672, MATLAB-delen. Uppgiften √§r uppgift 8, rotation, d√§r man ska rotera objekt i 2D och 3D.
 
+### Plan
+Kod f√∂r att hj√§lpa en annan student med dess projektuppgift i SF1672.
