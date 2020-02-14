@@ -10,3 +10,6 @@ All kod för projektuppgiften för SF1672, MATLAB-delen. Uppgiften är uppgift 8
 
 ### Plan
 Kod för att hjälpa en annan student med dess projektuppgift i SF1672.
+
+### Annat
+Övriga filer relaterat till uppgifter i MATLAB.
